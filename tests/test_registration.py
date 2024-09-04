@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class TestRegistration:
     @pytest.mark.parametrize("email, password", [
-        ("surovtseva_0013@yandex.ru", "validpassword"),
+        ("surovtseva_000013@yandex.ru", "validpassword"),
         ("surovtseva_0013@yandex.ru", "short")
     ])
     def test_registration(self, driver, email, password):

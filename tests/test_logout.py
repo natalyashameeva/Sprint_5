@@ -1,5 +1,4 @@
 from locators import Locators
-from selenium.webdriver.common.by import By
 
 class TestLogout:
 
@@ -22,4 +21,4 @@ class TestLogout:
 
         # Выход из личного кабинета
         driver.find_element(*Locators.LOGOUT_BUTTON).click()
-        assert driver.find_element(By.XPATH, '//main/div/h2').text == 'Вход'
+        assert driver.find_element(*Locators.LOGIN_PAGE_HEADER).text == 'Вход'

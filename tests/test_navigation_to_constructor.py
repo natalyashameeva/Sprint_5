@@ -1,5 +1,4 @@
 from locators import Locators
-from selenium.webdriver.common.by import By
 
 class TestNavigationFromPersonalAccountToConstructor:
 
@@ -8,7 +7,7 @@ class TestNavigationFromPersonalAccountToConstructor:
 
         # Переход в конструктор
         driver.find_element(*Locators.CONSTRUCTOR_BUTTON).click()
-        assert driver.find_element(By.XPATH, '//section[1]/h1').text == 'Соберите бургер'
+        assert driver.find_element(*Locators.CONSTRUCTOR_HEADER).text == 'Соберите бургер'
 
         # Возврат в личный кабинет
         driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()

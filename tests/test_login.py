@@ -1,6 +1,5 @@
 import pytest
 from locators import Locators
-from selenium.webdriver.common.by import By
 
 
 class TestLogin:
@@ -30,5 +29,5 @@ class TestLogin:
 
 
         # Проверка, что появилась кнопка "Оформить заказ"
-        assert driver.find_element(By.XPATH, '//section[2]/div/button').text == 'Оформить заказ'
+        assert driver.find_element(*Locators.ORDER_BUTTON).text == 'Оформить заказ'
 
